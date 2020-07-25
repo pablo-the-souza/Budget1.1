@@ -59,6 +59,7 @@
             this.category = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.monthCalendarStart = new System.Windows.Forms.MonthCalendar();
+            this.filter = new System.Windows.Forms.Button();
             this.mainBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new Budget1._1.Data.DataSet1();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -325,31 +326,31 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(122, 415);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(36, 358);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 23);
+            this.button1.Size = new System.Drawing.Size(126, 30);
             this.button1.TabIndex = 12;
-            this.button1.Text = "Category";
+            this.button1.Text = "Filter By Category";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(133, 300);
+            this.button2.Location = new System.Drawing.Point(36, 300);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(126, 34);
             this.button2.TabIndex = 13;
-            this.button2.Text = "Dates";
+            this.button2.Text = "Filter By Date";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // category
             // 
             this.category.AccessibleName = "";
-            this.category.Location = new System.Drawing.Point(122, 387);
+            this.category.Location = new System.Drawing.Point(179, 363);
             this.category.Name = "category";
-            this.category.Size = new System.Drawing.Size(100, 22);
+            this.category.Size = new System.Drawing.Size(113, 22);
             this.category.TabIndex = 14;
             this.category.TextChanged += new System.EventHandler(this.category_TextChanged);
             // 
@@ -370,7 +371,6 @@
             this.groupBox1.Size = new System.Drawing.Size(293, 223);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // monthCalendarStart
@@ -381,6 +381,16 @@
             this.monthCalendarStart.Name = "monthCalendarStart";
             this.monthCalendarStart.ShowWeekNumbers = true;
             this.monthCalendarStart.TabIndex = 20;
+            // 
+            // filter
+            // 
+            this.filter.Location = new System.Drawing.Point(36, 407);
+            this.filter.Name = "filter";
+            this.filter.Size = new System.Drawing.Size(288, 31);
+            this.filter.TabIndex = 21;
+            this.filter.Text = "Filter By Date and Category";
+            this.filter.UseVisualStyleBackColor = true;
+            this.filter.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // mainBindingSource
             // 
@@ -447,6 +457,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(925, 718);
+            this.Controls.Add(this.filter);
             this.Controls.Add(this.monthCalendarStart);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.category);
@@ -505,6 +516,7 @@
         private System.Windows.Forms.TextBox category;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.MonthCalendar monthCalendarStart;
+        private System.Windows.Forms.Button filter;
     }
 }
 

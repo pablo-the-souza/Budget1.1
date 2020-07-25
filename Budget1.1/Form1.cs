@@ -136,5 +136,16 @@ namespace Budget1._1
         {
 
         }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            this.mainTableAdapter.FillByCategoryAndDate
+                (
+                this.dataSet1.main, 
+                category.Text, 
+                monthCalendarStart.SelectionRange.Start.ToString(), monthCalendarStart.SelectionRange.End.ToString()
+                );
+               
+        }
     }
 }
