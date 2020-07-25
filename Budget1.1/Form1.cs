@@ -34,5 +34,107 @@ namespace Budget1._1
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.mainTableAdapter.FillByCategory(this.dataSet1.main, category.Text);
+            sum(category.Text);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.mainTableAdapter.GetWeek(this.dataSet1.main, monthCalendarStart.SelectionRange.Start.ToString() , monthCalendarStart.SelectionRange.End.ToString());
+              
+        }
+
+        private void sum(String category)
+        {
+            decimal sum = 0;
+            foreach (DataRow row in dataSet1.main)
+            {
+                if (row["category"].ToString().Equals(category))
+                {
+                    decimal value = Decimal.Parse(row["value"].ToString());
+                    sum = value + sum;
+                }
+            }
+            MessageBox.Show("This category = " + sum.ToString());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            decimal sum = 0;
+            foreach (DataRow row in dataSet1.main)
+            {
+                decimal value = Decimal.Parse(row["value"].ToString());
+                sum = value + sum; 
+            }
+            MessageBox.Show(sum.ToString());
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void idLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void idTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nameTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void valueLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void valueTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void categoryLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void categoryTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void category_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
