@@ -2,12 +2,12 @@
 {
 
 
-    partial class DataSet1
+    partial class DataSet2
     {
     }
 }
 
-namespace Budget1._1.Data.DataSet1TableAdapters {
+namespace Budget1._1.Data.DataSet2TableAdapters {
     
     
     public partial class mainTableAdapter {
